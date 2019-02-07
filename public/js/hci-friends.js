@@ -10,6 +10,12 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
+	$(".friendos a").click(replaceName);
+}
+function replaceName(e) {
+	e.preventDefault();
+	var name = $(this).text().trim();
+	$(this).text(anagrammedName(name));
 }
 
 function anagrammedName(name) {
